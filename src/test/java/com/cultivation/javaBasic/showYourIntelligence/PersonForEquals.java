@@ -36,7 +36,7 @@ public class PersonForEquals {
     public boolean equals(Object obj) {
         // TODO: please modify the following code to pass the test
         // <--start
-        throw new NotImplementedException();
+        return obj instanceof PersonForEquals && this.name.equals(((PersonForEquals) obj).getName()) && this.yearOfBirth == ((PersonForEquals) obj).getYearOfBirth();
         // --end-->
     }
 
@@ -44,7 +44,7 @@ public class PersonForEquals {
     public int hashCode() {
         // TODO: please modify the following code to pass the test
         // <--start
-        throw new NotImplementedException();
+        return this.name.hashCode() + this.yearOfBirth;
         // --end-->
     }
 }
